@@ -1,0 +1,19 @@
+language: ruby
+rvm:
+- 2.0.0
+install:
+- npm install -g grunt-cli
+- npm install -g bower
+- bundle install
+- npm install
+- bower install
+script:
+- grunt build
+after_success: bundle exec s3_website push --headless
+env:
+  global:
+  - secure: cQOdJ3m1XCV3xUu7QbaAWtPESZv/kCVjAK9PvETWCjFN+pNULlN6qlJcmCMxKIfFR0oWIwyEeWXEqialid5gpBCDikyIasF/6CEJO/T5412XPZKPRCj9sOGs1UOl2Eols7AkrSaZIlHXlztesMfWUpHZlu1/a+DAxl2tcUf16IQ=
+  - secure: Ruk/eqAXNl1w4YHNarEXLx080oNzZq4xDeJfHsbkj7Ka1AOXtfxD4BhKV0Yo6w/ckcl09PtrgitmU+xUWtsYGKpGJa4IyLxZg6gOvIgwVwOyjZopN8fxNUVJy+lBzzd8NXL/QYRicM/vfqScRNDj+W5WE9aH7WZxh37QdPawVN8=
+branches:
+  only:
+  - master
