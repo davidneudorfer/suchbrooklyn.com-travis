@@ -1,19 +1,23 @@
 language: ruby
+
 rvm:
-- 2.0.0
+  - 2.1.2
+
 install:
-- npm install -g grunt-cli
-- npm install -g bower
-- bundle install
-- npm install
-- bower install
+  - bundle install
+
 script:
-- grunt build
+  - jekyll build
+  - check-links _site
+
 after_success: bundle exec s3_website push --headless
+
 env:
   global:
-  - secure: cQOdJ3m1XCV3xUu7QbaAWtPESZv/kCVjAK9PvETWCjFN+pNULlN6qlJcmCMxKIfFR0oWIwyEeWXEqialid5gpBCDikyIasF/6CEJO/T5412XPZKPRCj9sOGs1UOl2Eols7AkrSaZIlHXlztesMfWUpHZlu1/a+DAxl2tcUf16IQ=
-  - secure: Ruk/eqAXNl1w4YHNarEXLx080oNzZq4xDeJfHsbkj7Ka1AOXtfxD4BhKV0Yo6w/ckcl09PtrgitmU+xUWtsYGKpGJa4IyLxZg6gOvIgwVwOyjZopN8fxNUVJy+lBzzd8NXL/QYRicM/vfqScRNDj+W5WE9aH7WZxh37QdPawVN8=
-branches:
+    - secure: WUtMInoqdxIr76dn/mlcAEQR1M86TYhWOUIJkr1uXKLJy/Dr+l9oruKGBQ6+CP4dlL7lZ8iQVkC/qRPis/3EwnSeBMVQwDPwcGi5Jaw4WYJFL9GVBt7qMGXDIZ7A3maS8iVRg8Gr+OJfKF/58Vxzv8aailnUmMLFgyR444O0egs=
+    - secure: ULhrR+VBDRs7zK4dO8D3FXSVe7IY8GZUaW4vGW8C01eyjYOvPlV/tiaQKC8rGXvsN/LfPzzz6mOv+rWAAcOI9WoHufVjk+YM7d65s/6zTdWwD2T+XEeV8Tc4diaX9vdFPFDEm/KxpvWaVmcvIt4XxmRdijjj/69B8IJFMShG7F4=
+    - secure: EKoKVSwoKVgYNtdvUWLEWDGghZZKNdqgzYNfiFh0R6JlY9+ggKZMvW/AP2YCTxD3E3Cgjc6d9/qlrHsDUdKS/xlKZ8wixkkxjb1K5Lhk8cUCaOZ5sSpiFj6nhN+OR/Qs5r18s+c2VSXfSgKfR9TdixpdqSzWz/jVHzbcTdv/MoY=
+    - secure: V9Y8+cQBPgii/t2d5yQCd/k2Feq9AoiRrUFhx/HoJL+LCMxV0CjGtF5MQ9tS8gDgi/vlYFhsssmMEmpzX710WAsjpCZAxUZIEI1xkhwc2PHVOste7L1UGGvhdXdYAHa7UaEuKT7Tdg4Lcnkox/+T3o7uOcOpcCRacl/enSjjI3g=
+  branches:
   only:
-  - master
+    - master
