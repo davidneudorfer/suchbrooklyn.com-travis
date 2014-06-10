@@ -7,7 +7,7 @@ Looking for a simple, responsive, theme for your Jekyll powered blog? Well look 
 * Responsive templates. Looking good on mobile, tablet, and desktop.
 * Readable typography to make your words shine.
 * Gracefully degrading in older browsers. Compatible with Internet Explorer 9+ and all modern browsers.
-* Minimal embellishments and subtle animations. 
+* Minimal embellishments and subtle animations.
 * Support for large images to call out your favorite posts.
 * Disqus comments if you choose to enable.
 * Tags for [Open Graph](https://developers.facebook.com/docs/opengraph/) and [Twitter Cards](https://dev.twitter.com/docs/cards) for a better social sharing experience.
@@ -142,13 +142,3 @@ For full customization details and more information on the theme check out the [
 Having a problem getting something to work or want to know why I setup something in a certain way? Ping me on Twitter [@mmistakes](http://twitter.com/mmistakes) or [file a GitHub Issue](https://github.com/mmistakes/so-simple-theme/issues/new).
 
 ---
-
-## License
-
-This theme is free and open source software, distributed under the [GNU General Public License](LICENSE) version 2 or later. So feel free to to modify this theme to suit your needs. 
-
-If you'd like to give me credit somewhere on your blog or tweet a shout out to [@mmistakes](https://twitter.com/mmistakes), that would be pretty sweet.
-
-
-[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/mmistakes/so-simple-theme/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
-
